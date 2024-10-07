@@ -1,0 +1,2 @@
+# spec
+fastn language specification
