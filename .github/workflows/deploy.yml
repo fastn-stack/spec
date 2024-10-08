@@ -1,0 +1,15 @@
+name: Deploy Site to FifthTry
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    permissions: write-all
+    runs-on: ubuntu-latest
+    steps:
+      - name: actions/checkout@v4
+      - run: sh -c "$(curl -fsSL https://fastn.com/install.sh)"
+      - run: fastn upload

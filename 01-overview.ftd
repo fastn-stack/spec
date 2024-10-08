@@ -1,0 +1,149 @@
+-- ds.page: `fastn` Specification
+
+This document describes the specification of the `fastn` language. It is not intended as
+tutorial.
+
+This is not yet a formal document. It is a work in progress, and written in relatively plain
+English. The goal is to make this an unambiguous document that can be used to implement `fastn`,
+and any contribution is welcome.
+
+Currently there is only one implementation of `fastn`, but other alternate implementation are
+welcome.
+
+-- ds.h1: Purpose Of The Language
+
+`fastn` language is a HTTP / User Interface language. A `fastn` program is a fullstack web
+application. The HTTP part, and the User Interface, can be implemented in many ways. The
+`fastn` compiler/runtime accepts a "path", eg `/hello/` as the entrypoint along with the
+name of main `fastn`, and returns the JSON or User Interface.
+
+`fastn /` on terminal for example, when running from inside a folder containing a fastn
+package will show terminal based user interface as described by our UI language. If
+the author of the package wanted, `/` (or any path) can return a JSON, in which case
+the output would be the JSON, and printed on terminal/piped into file.
+
+`fastn serve` can start a http server, and the request to the server from browser will
+render the UI as described by the `fastn` language as a web page. If the author of the
+fastn package want, they can return JSON, in which case the JSON will be returned to
+browser with right content type.
+
+Instead of JSON authors can chose to return YML etc also, further, a UI also has backing
+data, so instead of getting the UI, the client can do content negotiation, and request
+the backing data as JSON or YML etc as well.
+
+-- ds.h1: Target
+
+`fastn` programs are invoked with a target. The target can be `stdio` for pure text output,
+`terminal` for ncurses based terminal UI, `web` for Web Browsers, `windows`, `osx`, `linux`,
+`ios`, `android` and so on.
+
+The way UI is rendered, and what UI capabilities are dependent on the target. A `fastn`
+program can use `target` as a switch to provide different UI for different targets.
+
+`fastn` has a minimum ui abstraction, in the form of `ftd.*` components, that are available
+on all supported `fastn` targets. Each target can also specify its own components, and
+are only available on that target.
+
+-- ds.h2: Target Specific Libraries
+
+Target can also specify libraries that are available only on that target. There is a
+target native way to define UI components, and library functions, that are available
+when using that target. fastn ui components can use these target specific components,
+and fastn user defined functions can call target specific functions.
+
+-- ds.h2: Target Neutral Vs Target Dependent Code
+
+When writing code, authors can write target neutral code, or target dependent code.
+Most programs would use target neutral code, and only use target dependent code when
+absolutely necessary.
+
+
+-- ds.h1: Main `fastn` Package
+
+`fastn` code is organised as packages. There is a main package, which is the entrypoint of
+the `fastn` program. The main package is the package that is invoked when the `fastn` program
+is run.
+
+-- ds.h1: File Path Based Routing
+
+`fastn` programs take route, and other request input, as parameter. The `route` or `path`
+is converted to a file path, and the file path is used to find the `fastn` module within
+the fastn package.
+
+-- ds.h2: Dynamic Routes
+
+`fastn` package can have dynamic routes. The dynamic routes are specified in `FASTN.ftd`
+file, and the dynamic routes are used to find the `fastn` module within the package.
+
+The dynamic routes can contain wildcards, and the wildcards are used to extract values
+from the route, and these values are passed to the `fastn` module.
+
+
+-- ds.h1: `fastn` Package
+
+`fastn` compiler works at package level. `fastn` files have an extension, `.ftd` and they are
+organised into `fastn` packages. Each `fastn` package has a mandatory `FASTN.ftd` file at the
+root level.
+
+A `fastn` package contains `ftd` files, and many other kind of files, JS files, CSS files,
+PNG/JPEG, Font files and so on.
+
+A `fastn` package can be created to distribute static files as well, not just ftd files.
+
+-- ds.code:
+lang: ftd
+
+\-- import: fastn
+\-- fastn.package: hello-world
+
+-- ds.h1: `fastn` modules
+
+Any ftd file in a fastn package is a "fastn module". A fastn package is composed of zero or
+more modules, and zero or more static files.
+
+fastn modules can also be created using `ftd.module` syntax:
+
+-- ds.code:
+lang: ftd
+
+\-- ftd.module foo: ;;
+
+-- ds.h1: `p-script`
+
+The `fastn` files are composed of "sections", described in 02-p1 chapter. Each
+
+
+-- ds.h1: Comments
+
+-- ds.h2: Line Comments
+
+`fastn` uses `;;` as line comment character. Everything from the first ``;;` till the end
+of line is comment. Comments can be escaped by prefixing a backslash character: `\;;`.
+Literal backslash can be inserted by putting two backslashes, `\\`.
+
+
+-- ds.h2: Structural Comments
+
+Entire "section" can be commented out by adding a `/` in the front of the section, e.g.,
+
+-- ds.code:
+lang: ftd
+
+\/-- ftd.text:
+
+this is also commented out, because this is the body of the section, that started in
+the line beginning with `--`, but it contains, `/--`, commenting out everything till
+the next section or the end of file.
+
+\-- ftd.text: next section, not commented
+
+-- ds.markdown:
+
+In `0.4` we also allow `/` to comment out entire body, but we are deprecating that in
+`0.5`.
+
+`/` can also be added in any of the section header, both simple and multi-line, to comment
+out the entire header.
+
+
+-- end: ds.page
