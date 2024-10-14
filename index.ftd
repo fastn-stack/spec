@@ -1,0 +1,35 @@
+-- ds.page: `fastn` Specification
+
+-- ds.section-column:
+align-content: left
+inset: $ds.spaces.inset-wide.large
+
+
+-- ds.copy-regular:
+
+`fastn` is a framework to build UIs. This spec describes the syntax for `fastn`
+programs and their capabilities.
+
+[TBD] A more better introduction can be prepared later.
+
+This is not yet a formal document. It is a work in progress, and written in
+relatively plain English. The goal is to make this an unambiguous document that
+can be used to implement `fastn`. Any contribution is welcome.
+
+The conversations related to the spec takes place on
+[fastn-stack/fastn](https://github.com/orgs/fastn-stack/discussions) and on our
+[discord server](https://discord.gg/fastn-stack-793929082483769345)
+
+Currently there is only [one implementation of
+`fastn`](https://github.com/fastn-stack/fastn/), but other alternate
+implementation can be derived using this spec.
+
+
+-- ds.heading-large: Table of Contents
+
+- [Overview](/overview/)
+- [`ftd::p1` grammar](/p1/)
+
+
+-- end: ds.section-column
+-- end: ds.page

@@ -1,0 +1,9 @@
+-- import: fastn
+
+-- fastn.package: fast-nspec
+
+-- fastn.dependency: design-system.fifthtry.site
+
+
+-- fastn.auto-import: design-system.fifthtry.site as ds
+-- fastn.auto-import: fastn/processors as pr
