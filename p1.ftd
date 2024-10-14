@@ -8,7 +8,8 @@ inset: $ds.spaces.inset-wide.large
 
 `fastn` is based on a low-level grammar called `ftd::p1` grammar.
 
--- ds.heading-large: `section`
+-- eds.heading-large-id: `section`
+id: section
 
 A `ftd::p1` file is composed of "sections". A section looks like this:
 
@@ -24,13 +25,12 @@ the body of the first section
 \-- something:
 yo: 42
 
--- ds.copy-regular:
-
 Each section starts with `-- `.
 
 The section has these properties:
 
--- ds.heading-medium: `section kind`
+-- eds.heading-medium-id: `section kind`
+id: secition-kind
 
 The section kind can be define after `-- ` and before the section name. This is
 optional parameter.
@@ -58,7 +58,8 @@ lang: ftd
 
 
 
--- ds.heading-medium: `section name`
+-- eds.heading-medium-id: `section name`
+id: section-name
 
 The section name is the only **mandatory parameter** for a section. Name starts
 after `-- ` or section kind if present, and ends with the first `:`. Trailing
@@ -72,7 +73,8 @@ hash(`#`), and hyphens(`-`). Colon terminates the section name.
 
 Leading and trailing whitespaces are not considered part of the section name.
 
--- ds.heading-medium: `section caption`
+-- eds.heading-medium-id: `section caption`
+id: section-caption
 
 What comes after `:` in the section line, till the end of the first line is called
 the `caption` of the section.
@@ -84,7 +86,8 @@ the second section does not have a caption.
 
 Leading and trailing whitespaces are not considered part of the caption.
 
--- ds.heading-medium: `section headers`
+-- eds.heading-medium-id: `section headers`
+id: section-headers
 
 After the "section line" (the first line that starts with `-- `), zero or more
 section headers can be passed. Header can be passed in two ways: `inline` and
@@ -176,7 +179,8 @@ next-foo-header: 1
 In this case the `sidebar` header to `foo` is a block header, and it ends at the
 `end: sidebar`
 
--- ds.heading-medium: `section body`
+-- eds.heading-medium-id: `section body`
+id: section-body
 
 Like header, body can be passed in two ways: `inline` and `block`
 The body is optional.
@@ -230,7 +234,8 @@ Unlike `header`, `body` doesn't accept list of sections as value.
 
 
 
--- ds.heading-large: `sub-section`
+-- eds.heading-large-id: `sub-section`
+id: sub-section
 
 A section can contain zero or more `sub-sections`:
 
@@ -261,7 +266,8 @@ In above example, `some-section` section has two `sub-section`s, with names
 and the second one has a body, `subsection2 body`.
 
 
--- ds.heading-large: Programmatic Access
+-- eds.heading-large-id: Programmatic Access
+id: programmatic-access
 
 `ftd::p11` module in `ftd` crate can be used to read `ftd.p1` files. Wrappers of
 this crate in Python and other programming languages would hopefully come soon.

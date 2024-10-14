@@ -5,9 +5,8 @@ align-content: left
 inset: $ds.spaces.inset-wide.large
 
 
--- ds.heading-large: Purpose Of The Language
-
--- ds.copy-regular:
+-- eds.heading-large-id: Purpose Of The Language
+id: purpose
 
 `fastn` language is a HTTP / User Interface language. A `fastn` program is a fullstack web
 application. The HTTP part, and the User Interface, can be implemented in many ways. The
@@ -28,9 +27,8 @@ Instead of JSON authors can chose to return YML etc also, further, a UI also has
 data, so instead of getting the UI, the client can do content negotiation, and request
 the backing data as JSON or YML etc as well.
 
--- ds.heading-large: Target
-
--- ds.copy-regular:
+-- eds.heading-large-id: Target
+id: target
 
 `fastn` programs are invoked with a target. The target can be `stdio` for pure text output,
 `terminal` for ncurses based terminal UI, `web` for Web Browsers, `windows`, `osx`, `linux`,
@@ -43,43 +41,38 @@ program can use `target` as a switch to provide different UI for different targe
 on all supported `fastn` targets. Each target can also specify its own components, and
 are only available on that target.
 
--- ds.heading-large: Target Specific Libraries
-
--- ds.copy-regular:
+-- eds.heading-large-id: Target Specific Libraries
+id: target-specification-libraries
 
 Target can also specify libraries that are available only on that target. There is a
 target native way to define UI components, and library functions, that are available
 when using that target. fastn ui components can use these target specific components,
 and fastn user defined functions can call target specific functions.
 
--- ds.heading-large: Target Neutral Vs Target Dependent Code
-
--- ds.copy-regular:
+-- eds.heading-large-id: Target Neutral Vs Target Dependent Code
+id: target-neutral-vs-target-dependant-code
 
 When writing code, authors can write target neutral code, or target dependent code.
 Most programs would use target neutral code, and only use target dependent code when
 absolutely necessary.
 
 
--- ds.heading-large: Main `fastn` Package
-
--- ds.copy-regular:
+-- eds.heading-large-id: Main `fastn` Package
+id: main-fastn-package
 
 `fastn` code is organised as packages. There is a main package, which is the entrypoint of
 the `fastn` program. The main package is the package that is invoked when the `fastn` program
 is run.
 
--- ds.heading-large: File Path Based Routing
-
--- ds.copy-regular:
+-- eds.heading-large-id: File Path Based Routing
+id: file-path-based-routing
 
 `fastn` programs take route, and other request input, as parameter. The `route` or `path`
 is converted to a file path, and the file path is used to find the `fastn` module within
 the fastn package.
 
--- ds.heading-large: Dynamic Routes
-
--- ds.copy-regular:
+-- eds.heading-large-id: Dynamic Routes
+id: dynamic-routes
 
 `fastn` package can have dynamic routes. The dynamic routes are specified in `FASTN.ftd`
 file, and the dynamic routes are used to find the `fastn` module within the package.
@@ -88,9 +81,8 @@ The dynamic routes can contain wildcards, and the wildcards are used to extract 
 from the route, and these values are passed to the `fastn` module.
 
 
--- ds.heading-large: `fastn` Package
-
--- ds.copy-regular:
+-- eds.heading-large-id: `fastn` Package
+id: fastn-package
 
 `fastn` compiler works at package level. `fastn` files have an extension, `.ftd` and they are
 organised into `fastn` packages. Each `fastn` package has a mandatory `FASTN.ftd` file at the
@@ -107,7 +99,8 @@ lang: ftd
 \-- import: fastn
 \-- fastn.package: hello-world
 
--- ds.heading-large: `fastn` modules
+-- eds.heading-large-id: `fastn` modules
+id: fastn-modules
 
 Any ftd file in a fastn package is a "fastn module". A fastn package is composed of zero or
 more modules, and zero or more static files.
@@ -119,25 +112,25 @@ lang: ftd
 
 \-- ftd.module foo: ;;
 
--- ds.heading-large: `p-script`
+-- eds.heading-large-id: `p-script`
+id: p-script
 
 The `fastn` files are composed of "sections", described in 02-p1 chapter. Each
 
 
--- ds.heading-large: Comments
+-- eds.heading-large-id: Comments
+id: comments
 
--- ds.heading-large: Line Comments
-
--- ds.copy-regular:
+-- eds.heading-large-id: Line Comments
+id: line-comments
 
 `fastn` uses `;;` as line comment character. Everything from the first ``;;` till the end
 of line is comment. Comments can be escaped by prefixing a backslash character: `\;;`.
 Literal backslash can be inserted by putting two backslashes, `\\`.
 
 
--- ds.heading-large: Structural Comments
-
--- ds.copy-regular:
+-- eds.heading-large-id: Structural Comments
+id: structural-comments
 
 Entire "section" can be commented out by adding a `/` in the front of the section, e.g.,
 

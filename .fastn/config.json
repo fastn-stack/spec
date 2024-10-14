@@ -1,5 +1,5 @@
 {
-  "package": "fast-nspec",
+  "package": "fastn-spec.fifthtry.site",
   "all_packages": {
     "app-switcher.fifthtry.site": {
       "files": {
@@ -17282,6 +17282,32 @@
       "zip_url": "https://fifthtry.com/ft2/api/site/download?site-slug=inter-typography",
       "checksum": "61C43A01DEAA5B4540B9B6B843249881BB90D68C8BE5DE085BA1B2756A3D0D5F"
     },
+    "lato-font.fifthtry.site": {
+      "files": {
+        "FASTN.ftd": {
+          "name": "FASTN.ftd",
+          "checksum": "0AF42D0A57EE4092A39EF1922E78181263FEA6216290E8CE9DE0AAD5748423EC",
+          "size": 5509
+        },
+        "README.md": {
+          "name": "README.md",
+          "checksum": "BC787B67F90323471FAFC4649BF27BC7A979EC84EF2704CA1F4883EA1EDE8DC5",
+          "size": 966
+        },
+        "custom.ftd": {
+          "name": "custom.ftd",
+          "checksum": "8161CE3D38D51321845491ECCF1B194A7E318BC1CF4F1BA0111F4D19C23731CA",
+          "size": 4996
+        },
+        "index.ftd": {
+          "name": "index.ftd",
+          "checksum": "23B8AE5012951E753E941D892B7BB74629310D714BFAED9A41B4F94DFC4C65C3",
+          "size": 2146
+        }
+      },
+      "zip_url": "https://fifthtry.com/ft2/api/site/download?site-slug=lato-font",
+      "checksum": "0DED0EDF55852E760A2C09E50EBBBE4508915A28E499DB2BA22649E6F4CAD45B"
+    },
     "manrope-font.fifthtry.site": {
       "files": {
         "FASTN.ftd": {
@@ -17297,6 +17323,52 @@
       },
       "zip_url": "https://fifthtry.com/ft2/api/site/download?site-slug=manrope-font",
       "checksum": "DAB07152B3198E530D4CADDA3DB98DD8CC10A324554EA1344D6BF9FCC2F85A3F"
+    },
+    "midnight-storm-typography.fifthtry.site": {
+      "files": {
+        "Changelog.md": {
+          "name": "Changelog.md",
+          "checksum": "3D8E5A54B51EC6632C7FDE92E3F413EB236290753673E8BF66AA4CD7A3B9A06F",
+          "size": 336
+        },
+        "FASTN.ftd": {
+          "name": "FASTN.ftd",
+          "checksum": "8402FCF8EFC13B9391729BC44FFA66B7A4E168DAC8A7609D3B8D9239B070BD68",
+          "size": 389
+        },
+        "LICENSE.md": {
+          "name": "LICENSE.md",
+          "checksum": "A95364C3842F2C439BD629F65E304A2850239B443596467254EE96E71CA213DD",
+          "size": 1498
+        },
+        "README.md": {
+          "name": "README.md",
+          "checksum": "7A5E46B6892D6A106463F03661BB7B7B64D8D4A5773733732B51ED26A090AF55",
+          "size": 1405
+        },
+        "fastn-typography.ftd": {
+          "name": "fastn-typography.ftd",
+          "checksum": "90C74114F286E69341572D40347FC483D6B7C4511C6CA41635A9A0D3CC10B72C",
+          "size": 8922
+        },
+        "index.ftd": {
+          "name": "index.ftd",
+          "checksum": "5EF2FC8842D30B5F911AD536E438E01398886EB3E25AB3550CB93848552B0F35",
+          "size": 13006
+        },
+        "static/midnight-strom-typography-dark-example.png": {
+          "name": "static/midnight-strom-typography-dark-example.png",
+          "checksum": "7A9C984A6BF29B53CEE2A6D298120CD0001ED789C6964EA2216F55AE75C93213",
+          "size": 90460
+        },
+        "static/midnight-strom-typography-example.png": {
+          "name": "static/midnight-strom-typography-example.png",
+          "checksum": "39EA8EF3A6125A0BEF45AA0E02E1E7AA58528D077F63AE5F5EEBFDB3BC8511A3",
+          "size": 88793
+        }
+      },
+      "zip_url": "https://fifthtry.com/ft2/api/site/download?site-slug=midnight-storm-typography",
+      "checksum": "5E96175CCE023A8F37DA15CF99D3CD8F848F0D117E93D5920E69E31A38F4D7C7"
     },
     "package-doc.fifthtry.site": {
       "files": {
@@ -18565,6 +18637,32 @@
       },
       "zip_url": "https://fifthtry.com/ft2/api/site/download?site-slug=site-doc",
       "checksum": "1D9A320B3585C780F8A1EAF4809C280BB8DDAC8CECCB0CC4041E4F15E07352BA"
+    },
+    "source-code-pro-font.fifthtry.site": {
+      "files": {
+        "FASTN.ftd": {
+          "name": "FASTN.ftd",
+          "checksum": "40B10C8BE03DFBFD10C8B84FFF848AB06635E04ADAFE3514B7D2F1CEBC4506CB",
+          "size": 29014
+        },
+        "README.md": {
+          "name": "README.md",
+          "checksum": "A7B1129859E44C42353835F88C1D828789EBBF91E0438235DA1402B6F858F7D5",
+          "size": 1045
+        },
+        "custom.ftd": {
+          "name": "custom.ftd",
+          "checksum": "828B9EF8A69F5297697EF3DBD91E04FD31B9D6F016561B9AA7B7820F37F3A5E6",
+          "size": 6991
+        },
+        "index.ftd": {
+          "name": "index.ftd",
+          "checksum": "3CA5A121F01529A6DCB689128B436ECA75A825832DD4E41A0DD66029793DB16A",
+          "size": 2483
+        }
+      },
+      "zip_url": "https://fifthtry.com/ft2/api/site/download?site-slug=source-code-pro-font",
+      "checksum": "0B291C3959F3B057B6EEDB6547E4D73034B1E85A47FF52AD3E2AA43FA228F3C4"
     },
     "svg-icons.fifthtry.site": {
       "files": {

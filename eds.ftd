@@ -1,0 +1,106 @@
+-- import: svg-icons.fifthtry.site/phosphor
+
+-- string current-url:
+$processor$: pr.current-url
+
+-- component heading-large-id:
+caption text:
+string id:
+optional ds.gap margin:
+ftd.color color: $ds.colors.text-strong
+optional string link:
+ftd.text-style list style:
+optional body content:
+private string slug: $url(a = $heading-large-id.id)
+private boolean $copied: false
+
+-- ftd.column:
+
+-- ftd.row:
+id: $heading-large-id.id
+align-content: left
+
+-- phosphor.light: clipboard
+size: 32
+if: { !heading-large-id.copied  }
+$on-click$: $ftd.copy-to-clipboard(a = $heading-large-id.slug)
+$on-click$: $ftd.set-bool($a = $heading-large-id.copied, v = true)
+
+-- phosphor.light: clipboard-text
+size: 32
+if: { heading-large-id.copied  }
+$on-click$: $ftd.copy-to-clipboard(a = $heading-large-id.slug)
+$on-click$: $ftd.set-bool($a = $heading-large-id.copied, v = false)
+
+
+-- ds.heading-large: $heading-large-id.text
+margin: $heading-large-id.margin
+color: $heading-large-id.color
+link: $heading-large-id.link
+style: $heading-large-id.style
+
+
+-- end: ftd.row
+
+-- ds.copy-regular:
+if: { heading-large-id.content }
+
+$heading-large-id.content
+
+-- end: ftd.column
+
+-- end: heading-large-id
+
+-- component heading-medium-id:
+caption text:
+string id:
+optional ds.gap margin:
+ftd.color color: $ds.colors.text-strong
+optional string link:
+ftd.text-style list style:
+private string slug: $url(a = $heading-medium-id.id)
+private boolean $copied: false
+optional body content:
+
+-- ftd.column:
+
+-- ftd.row:
+id: $heading-medium-id.id
+align-content: left
+
+-- phosphor.light: clipboard
+size: 32
+if: { !heading-medium-id.copied  }
+$on-click$: $ftd.copy-to-clipboard(a = $heading-medium-id.slug)
+$on-click$: $ftd.set-bool($a = $heading-medium-id.copied, v = true)
+
+-- phosphor.light: clipboard-text
+size: 32
+if: { heading-medium-id.copied  }
+$on-click$: $ftd.copy-to-clipboard(a = $heading-medium-id.slug)
+$on-click$: $ftd.set-bool($a = $heading-medium-id.copied, v = false)
+
+
+-- ds.heading-medium: $heading-medium-id.text
+margin: $heading-medium-id.margin
+color: $heading-medium-id.color
+link: $heading-medium-id.link
+style: $heading-medium-id.style
+
+-- end: ftd.row
+
+-- ds.copy-regular:
+if: { heading-medium-id.content }
+
+$heading-medium-id.content
+
+-- end: ftd.column
+
+-- end: heading-medium-id
+
+
+-- string url(a):
+string a:
+string current_url: $current-url
+
+"https://fastn-spec.fifthtry.site" + current_url + "#" + a

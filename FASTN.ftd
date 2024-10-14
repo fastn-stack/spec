@@ -1,9 +1,15 @@
 -- import: fastn
 
--- fastn.package: fast-nspec
+-- fastn.package: fastn-spec.fifthtry.site
 
 -- fastn.dependency: design-system.fifthtry.site
+provided-via: fastn-spec.fifthtry.site/ds
+
+-- fastn.dependency: dark-flame-cs.fifthtry.site
+-- fastn.dependency: midnight-storm-typography.fifthtry.site
+-- fastn.dependency: svg-icons.fifthtry.site
 
 
 -- fastn.auto-import: design-system.fifthtry.site as ds
+-- fastn.auto-import: fastn-spec.fifthtry.site/eds as eds
 -- fastn.auto-import: fastn/processors as pr

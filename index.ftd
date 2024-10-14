@@ -25,7 +25,10 @@ Currently there is only [one implementation of
 implementation can be derived using this spec.
 
 
--- ds.heading-large: Table of Contents
+-- eds.heading-large-id: Table of Contents
+id: table-of-contents
+
+-- ds.copy-regular:
 
 - [Overview](/overview/)
 - [`ftd::p1` grammar](/p1/)
